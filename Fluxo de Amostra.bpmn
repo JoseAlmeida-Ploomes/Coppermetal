@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="_2025051300851" targetNamespace="http://www.bizagi.com/definitions/_2025051300851" xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL">
+  <process id="Id_a7f2b6e5-b0fc-414f-a958-5fd77a296b98" name="Processo principal">
+    <documentation />
+    <laneSet id="Id_8716ffec-9749-4b89-b1c4-cb01b61b5539" />
+  </process>
+  <process id="Id_8d47f584-e61c-40cf-89d5-7119455e5c56" name="Elaboração de Proposta">
+    <documentation />
+    <laneSet id="Id_1b8cba19-c160-482f-9cf6-cf34864fa249" />
+  </process>
+  <resource id="SDR" name="SDR">
+    <documentation>O SDR tem uma atuação bastante específica e com uma forte característica analística. Sua experiência em estratégias de marketing de atração é fundamental para que ele consiga enxergar perspectivas positivas em um lead. O seu trabalho se resume em, basicamente, duas etapas: análise e contato inicial.</documentation>
+  </resource>
+  <resource id="Hunter" name="Hunter">
+    <documentation>Hunter (do inglês, caçador) é o vendedor que atua na prospecção de novos clientes para a empresa. Como o nome sugere, é um perfil mais agressivo, em que o profissional de vendas adota uma postura ativa, sempre em contato com potenciais consumidores para marcar reuniões e ampliar o networking.</documentation>
+  </resource>
+  <resource id="Farmer" name="Farmer">
+    <documentation>Farmer (do inglês, fazendeiro) é o vendedor que atua na manutenção do relacionamento e na fidelização dos clientes da empresa. Seu nome se dá justamente por ser o profissional responsável por cultivar os clientes, investir o tempo necessário para entender a carteira e colher os frutos no futuro.</documentation>
+  </resource>
+  <resource id="Closer" name="Closer">
+    <documentation>loser de vendas é o nome dado ao vendedor que fica responsável por realizar o fechamento do processo de vendas. Em outros termos, ele é quem conduz o lead pela última etapa do funil.
+A principal responsabilidade desse profissional é usar técnicas para convencer o lead a fechar a compra.
+O profissional que atua como closer de vendas deve: saber se comunicar, praticar a escuta ativa e ter empatia para entender as dores dos clientes.</documentation>
+  </resource>
+  <collaboration id="Id_d80cd3f3-8086-4462-86d3-261a654acc13" name="Fluxo de Amostra">
+    <documentation />
+    <participant id="Id_9f48975e-583f-4ab7-ab6e-63d3f5b2fd8f" name="Processo principal" processRef="Id_a7f2b6e5-b0fc-414f-a958-5fd77a296b98">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#FFFFFF" />
+            <bizagi:BizagiProperty name="borderColor" value="#000000" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="Transparent" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+            <bizagi:BizagiProperty name="isMainParticipant" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </participant>
+    <participant id="Id_19e5b46b-af23-4569-8a2f-47e62af87509" name="Elaboração de Proposta" processRef="Id_8d47f584-e61c-40cf-89d5-7119455e5c56">
+      <documentation />
+      <extensionElements>
+        <bizagi:BizagiExtensions xmlns:bizagi="http://www.bizagi.com/bpmn20">
+          <bizagi:BizagiProperties>
+            <bizagi:BizagiProperty name="bgColor" value="#F5F2FF" />
+            <bizagi:BizagiProperty name="borderColor" value="#2500A6" />
+            <bizagi:BizagiProperty name="textColor" value="#000000" />
+            <bizagi:BizagiProperty name="textBackgroundColor" value="Transparent" />
+            <bizagi:BizagiProperty name="textDirection" value="" />
+          </bizagi:BizagiProperties>
+        </bizagi:BizagiExtensions>
+      </extensionElements>
+    </participant>
+  </collaboration>
+  <BPMNDiagram id="Diagram_0f53c564-23f7-43e7-be53-6e0d47af4973" xmlns="http://www.omg.org/spec/BPMN/20100524/DI">
+    <BPMNPlane id="DiagramElement_e9bca1be-60ef-4d06-9baa-02be456db6c2" bpmnElement="Id_d80cd3f3-8086-4462-86d3-261a654acc13">
+      <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+      <BPMNShape id="DiagramElement_2a839b6b-6cc6-41a6-ab81-d34f68703829" bpmnElement="Id_9f48975e-583f-4ab7-ab6e-63d3f5b2fd8f" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="30" y="30" width="700" height="350" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_28402020-fe67-4684-b2d5-85fd036a9073" labelStyle="Style_bc9612e5-b61f-4ff8-85ac-acf0f7ec6284">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+      <BPMNShape id="DiagramElement_3b73e509-0f95-4052-8169-9edb362c75f2" bpmnElement="Id_19e5b46b-af23-4569-8a2f-47e62af87509" isHorizontal="true">
+        <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+        <Bounds x="30" y="30" width="700" height="350" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        <BPMNLabel id="DiagramElement_33964895-1576-4b5c-9117-daa615170052" labelStyle="Style_b94e055f-9b5f-49d5-bd98-519c1e95ca3f">
+          <extension xmlns="http://www.omg.org/spec/DD/20100524/DI" />
+          <Bounds x="0" y="0" width="0" height="0" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+        </BPMNLabel>
+      </BPMNShape>
+    </BPMNPlane>
+    <BPMNLabelStyle id="Style_bc9612e5-b61f-4ff8-85ac-acf0f7ec6284">
+      <Font name="Segoe UI" size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+    <BPMNLabelStyle id="Style_b94e055f-9b5f-49d5-bd98-519c1e95ca3f">
+      <Font name="Segoe UI" size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" xmlns="http://www.omg.org/spec/DD/20100524/DC" />
+    </BPMNLabelStyle>
+  </BPMNDiagram>
+</definitions>
